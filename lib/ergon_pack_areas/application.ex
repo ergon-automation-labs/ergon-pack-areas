@@ -13,7 +13,7 @@ defmodule ErgonPackAreas.Application do
     children =
       if Application.get_env(:bot_army_library_runtime, :pack_mode, false) do
         [
-          {BotArmyRuntime.Health.Responder, [bot_name: :areas_pack, version: @version]}
+          {BotArmyLibraryRuntime.Health.Responder, [bot_name: :areas_pack, version: @version]}
         ]
       else
         []
